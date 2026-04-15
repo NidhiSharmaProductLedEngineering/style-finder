@@ -155,15 +155,13 @@ function ResultsContent() {
     <main style={{ background: 'var(--white)', minHeight: '100vh' }}>
 
       {/* Nav */}
-      <nav style={{ borderBottom: '1px solid var(--gray-100)', padding: '0 40px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <nav style={{ borderBottom: '1px solid var(--gray-100)', padding: '0 40px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--black)' }}>
         <Link href="/" style={{ textDecoration: 'none' }}>
-          <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, fontWeight: 400, letterSpacing: '0.08em', color: 'var(--black)', textTransform: 'uppercase' }}>
-            STYLE<span style={{ fontWeight: 300, fontStyle: 'italic' }}>finder</span>
-          </span>
+          <span className="brand">STYLEFINDER</span>
         </Link>
         <div style={{ display: 'flex', gap: 24 }}>
-          <Link href="/shopping" style={{ fontFamily: 'DM Sans', fontSize: 11, letterSpacing: '0.14em', color: 'var(--gray-400)', textTransform: 'uppercase', textDecoration: 'none' }}>Shopping</Link>
-          <Link href="/quiz"     style={{ fontFamily: 'DM Sans', fontSize: 11, letterSpacing: '0.14em', color: 'var(--gray-400)', textTransform: 'uppercase', textDecoration: 'none' }}>Retake</Link>
+          <Link href="/shopping" style={{ fontFamily: 'DM Sans', fontSize: 11, letterSpacing: '0.14em', color: 'var(--gray-500)', textTransform: 'uppercase', textDecoration: 'none' }}>Shopping</Link>
+          <Link href="/quiz"     style={{ fontFamily: 'DM Sans', fontSize: 11, letterSpacing: '0.14em', color: 'var(--gray-500)', textTransform: 'uppercase', textDecoration: 'none' }}>Retake</Link>
         </div>
       </nav>
 

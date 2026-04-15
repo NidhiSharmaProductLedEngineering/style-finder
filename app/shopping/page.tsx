@@ -70,16 +70,14 @@ export default function ShoppingPage() {
     <main style={{ background: 'var(--white)', minHeight: '100vh' }}>
 
       {/* Nav */}
-      <nav style={{ borderBottom: '1px solid var(--gray-100)', padding: '0 40px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <nav style={{ borderBottom: '1px solid var(--gray-900)', padding: '0 40px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--black)' }}>
         <Link href="/" style={{ textDecoration: 'none' }}>
-          <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, fontWeight: 400, letterSpacing: '0.08em', color: 'var(--black)', textTransform: 'uppercase' }}>
-            STYLE<span style={{ fontWeight: 300, fontStyle: 'italic' }}>finder</span>
-          </span>
+          <span className="brand">STYLEFINDER</span>
         </Link>
         <Link href="/quiz">
           <motion.button
-            whileHover={{ background: 'var(--gray-900)' }}
-            style={{ padding: '8px 20px', background: 'var(--black)', color: 'var(--white)', border: 'none', fontFamily: 'DM Sans', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', cursor: 'pointer', transition: 'background .2s' }}
+            whileHover={{ background: 'var(--yellow)', color: 'var(--black)', borderColor: 'var(--yellow)' }}
+            style={{ padding: '8px 20px', background: 'transparent', color: 'var(--yellow)', border: '1px solid var(--yellow)', fontFamily: 'DM Sans', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', cursor: 'pointer', transition: 'all .2s' }}
           >
             Take quiz →
           </motion.button>

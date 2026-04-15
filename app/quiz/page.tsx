@@ -49,14 +49,12 @@ export default function QuizPage() {
     <main style={{ background: 'var(--white)', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
 
       {/* Nav */}
-      <nav style={{ borderBottom: '1px solid var(--gray-100)', padding: '0 40px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
-        <button onClick={goBack} style={{ fontFamily: 'DM Sans', fontSize: 11, color: 'var(--gray-400)', background: 'none', border: 'none', cursor: 'pointer', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+      <nav style={{ borderBottom: '1px solid var(--gray-900)', padding: '0 40px', height: 56, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--black)', flexShrink: 0 }}>
+        <button onClick={goBack} style={{ fontFamily: 'DM Sans', fontSize: 11, color: 'var(--gray-500)', background: 'none', border: 'none', cursor: 'pointer', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
           ← Back
         </button>
         <Link href="/" style={{ textDecoration: 'none' }}>
-          <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, fontWeight: 400, letterSpacing: '0.08em', color: 'var(--black)', textTransform: 'uppercase' }}>
-            STYLE<span style={{ fontWeight: 300, fontStyle: 'italic' }}>finder</span>
-          </span>
+          <span className="brand">STYLEFINDER</span>
         </Link>
         <span style={{ fontFamily: 'DM Sans', fontSize: 11, color: 'var(--gray-300)', letterSpacing: '0.08em' }}>
           {step + 1} / {quizSteps.length}
