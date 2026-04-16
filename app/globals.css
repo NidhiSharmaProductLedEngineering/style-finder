@@ -6,24 +6,25 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --ob:     #080808;
-  --s1:     #111111;
-  --s2:     #171717;
-  --s3:     #222222;
-  --gold:   #E8B84B;
-  --gold2:  #F5D080;
-  --white:  #FAFAFA;
-  --muted:  #888888;
-  --dim:    #444444;
-  --border: rgba(232, 184, 75, 0.18);
-  --border2: rgba(232, 184, 75, 0.08);
+  --ob:      #080808;
+  --s1:      #111111;
+  --s2:      #181818;
+  --s3:      #242424;
+  --gold:    #E8B84B;
+  --gold2:   #F5D080;
+  --white:   #F5F5F5;
+  --text:    #D4D4D4;   /* body text — clearly readable on black */
+  --muted:   #A0A0A0;   /* secondary text — visible on black */
+  --dim:     #6A6A6A;   /* tertiary — subtle but readable */
+  --border:  rgba(232,184,75,.2);
+  --border2: rgba(232,184,75,.08);
 }
 
 html { scroll-behavior: smooth; }
 
 body {
   background: var(--ob);
-  color: var(--white);
+  color: var(--text);
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
@@ -42,19 +43,20 @@ body {
 @keyframes spin    { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes pulse   { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
 @keyframes scan    { 0% { top: 0; } 100% { top: 100%; } }
-@keyframes glow    { 0%,100% { box-shadow: 0 0 0 0 rgba(232,184,75,0); } 50% { box-shadow: 0 0 20px 2px rgba(232,184,75,.2); } }
+@keyframes glow    { 0%,100% { box-shadow: 0 0 0 0 rgba(232,184,75,0); } 60% { box-shadow: 0 0 22px 3px rgba(232,184,75,.22); } }
 
 .fade-up    { animation: fadeUp  .6s cubic-bezier(.22,1,.36,1) forwards; }
 .fade-in    { animation: fadeIn  .5s ease forwards; }
 .do-marquee { animation: marquee 28s linear infinite; }
 .do-shimmer { animation: shimmer 1.6s ease-in-out infinite; }
-.do-spin    { animation: spin    1s linear infinite; }
-.do-pulse   { animation: pulse   2s ease-in-out infinite; }
-.do-glow    { animation: glow    3s ease-in-out infinite; }
+.do-spin    { animation: spin 1s linear infinite; }
+.do-pulse   { animation: pulse 2s ease-in-out infinite; }
+.do-glow    { animation: glow 3s ease-in-out infinite; }
 
 .lift { transition: transform .22s ease, border-color .22s ease; }
 .lift:hover { transform: translateY(-3px); }
 
+/* Brand logotype */
 .brand {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
@@ -63,6 +65,7 @@ body {
   line-height: 1;
 }
 
+/* Reusable buttons */
 .gold-btn {
   background: var(--gold);
   color: var(--ob);
@@ -92,6 +95,7 @@ body {
 }
 .ghost-btn:hover { border-color: var(--gold); color: var(--gold); }
 
+/* Shared nav */
 .ob-nav {
   background: var(--ob);
   border-bottom: 1px solid var(--border);
@@ -103,14 +107,16 @@ body {
   flex-shrink: 0;
 }
 
+/* Dark card with gold hover */
 .ob-card {
   background: var(--s2);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border2);
   transition: border-color .22s ease, transform .22s ease;
   cursor: pointer;
 }
 .ob-card:hover { border-color: rgba(232,184,75,.5); transform: translateY(-2px); }
 
+/* Gold reveal line on card hover */
 .card-underline {
   width: 0;
   height: 1px;
